@@ -22,3 +22,4 @@ const InfiniteCarousel = ({
 };
 
 export default InfiniteCarousel;
+
