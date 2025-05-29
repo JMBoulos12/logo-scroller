@@ -36,11 +36,8 @@ const InfiniteCarousel = ({
     addAnimation();
   }, []);
   return (
-    <div
-      ref={scrollerRef}
-      className="scroller max-w-[800ox] border border-red-500"
-    >
-      <div className="scroll__inner flex gap-2 bg-gray-300">
+    <div ref={scrollerRef} className="scroller max-w-[800px]">
+      <div className="scroll__inner flex flex-wrap gap-2 bg-gray-300 py-4 animate-infinite_scroll">
         {logos.map((logo, index) => {
           return (
             <Link key={index} href={logo.url} className="w-max p-1 bg-white">
@@ -54,4 +51,3 @@ const InfiniteCarousel = ({
 };
 
 export default InfiniteCarousel;
-

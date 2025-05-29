@@ -1,7 +1,9 @@
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .scroller {
+  overflow: hidden;
   -webkit-mask: linear-gradient(
     90deg,
     transparent,
@@ -12,12 +14,17 @@
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-.scroll__inner {
-  width: max-content;
-  flex-wrap: nowrap;
+.scroll__inner:hover {
+  animation-play-state: paused;
 }
 
+/* .scroll__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+} */
 
-
-
-
+.scroll__inner {
+  display: flex;
+  width: max-content;
+  animation: infinite_scroll 10s linear infinite;
+}
