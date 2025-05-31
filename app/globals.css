@@ -1,4 +1,5 @@
-@import "tailwindcss/preflight";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 .scroller {
@@ -13,17 +14,13 @@
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-.scroll__inner:hover {
-  animation-play-state: paused;
-}
-
-/* .scroll__inner {
-  width: max-content;
-  flex-wrap: nowrap;
-} */
-
-.scroll__inner {
+.scroller__inner {
   display: flex;
   width: max-content;
-  animation: infinite_scroll 10s linear infinite;
+  animation: infinite_scroll 15s linear infinite;
+  gap: 0.5rem; /* Add some gap between items */
+}
+
+.scroller__inner:hover {
+  animation-play-state: paused;
 }
